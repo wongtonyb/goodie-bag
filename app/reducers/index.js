@@ -1,10 +1,8 @@
-const initialState = {};
+import candyReducer from './candies';
+import { combineReducers } from 'redux';
 
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+const rootReducer = combineReducers({
+  candies: candyReducer,
+});
 
 export default rootReducer;
